@@ -6,7 +6,7 @@ import re
 
 def hapax(file):
     file = open(file)
-    words = re.findall('\w+', file.read().lower())
+    words = re.findall('\w+', file.read())
     freqs = {key: 0 for key in words}
     for myBook in words:
         freqs[myBook] += 1
